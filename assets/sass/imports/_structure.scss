@@ -10,7 +10,8 @@
 .inner {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+ /* max-width: 1200px;*/
+  max-width:initial;
 }
 
 .inner-medium {
@@ -22,7 +23,7 @@
 .inner-small {
   margin-left: auto;
   margin-right: auto;
-  max-width: 680px;
+  max-width: fit-content;
 }
 
 .site {

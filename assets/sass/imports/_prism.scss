@@ -10,14 +10,16 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: _palette(primary);
   background: none;
-  font-family: _font(monospace);
-  font-size: 0.875rem;
+  /*font-family: _font(monospace);*/
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  /*font-size: 0.875rem;*/
+  font-size: 1.2rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1.74;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
@@ -31,18 +33,20 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   margin: 0 0 1.875rem;
   overflow: auto;
-  padding: 1.5rem;
+  padding: 1rem;
+    border-radius: 5px;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: _palette(bg);
+  background: var(--codeBg);
+  border: 1px solid var(--codeBorder);
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
   padding: .1em;
-  border-radius: 3px;
+  border-radius: 5px;
   white-space: normal;
 }
 
@@ -161,8 +165,12 @@ div.code-toolbar > .toolbar span {
   display: block;
   font-size: .75em;
   line-height: 1.5;
-  padding: .25em .5em;
+  padding: .25em .25em;
+  margin: .35em;
+  border-radius: 5px;
 }
+
+
 
 div.code-toolbar > .toolbar a:hover,
 div.code-toolbar > .toolbar a:focus,

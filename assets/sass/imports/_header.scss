@@ -2,10 +2,20 @@
  * Site Header
  * ----------------------------------------------------------------------------
  */
+
  .site-header {
-  background: #fff;
-  padding-bottom: 1.25em;
-  padding-top: 1.125em;
+  background: var(--navBg);
+  padding-bottom: 0.4em;
+  padding-top: 0.4em;
+  border-bottom: 1px solid #e9edf1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: initial;
+  margin: 0 auto;
+  border-bottom: 0rem solid var(--border);
+  align-items:center;
 }
 
 .site-header-inside {
@@ -15,6 +25,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  margin: 0 1.25rem;
 }
 
 .site-branding {
@@ -46,13 +57,14 @@
 }
 
 .site-navigation {
-  margin-left: auto;
+  margin-left: 0;
 
   .menu,
   .submenu {
     list-style: none;
     margin: 0;
     padding: 0;
+   display:inline-block;
   }
 
   .menu-item {
@@ -70,7 +82,13 @@
     border: 0;
     color: inherit;
     display: inline-block;
-    padding: 0.625rem 0;
+   /* padding: 0.625rem 0;*/
+    margin-right: 0px;
+    padding: 4px 4px;
+   font-size:18px;
+   line-height:26px;
+font-family: 'Roboto', ;
+    font-weight:400;
 
     &:hover,
     &:focus {
@@ -87,7 +105,7 @@
   .site-navigation {
     .menu-item {
       display: inline-block;
-      margin: 0 0 0 30px;
+      margin: 0 0.75rem;
 
       &.has-children > a {
         padding-right: 15px;
@@ -162,7 +180,7 @@
       display: none;
     }
 
-    
+
   }
 }
 
@@ -183,13 +201,13 @@
     -webkit-transition: opacity .15s ease-in-out,visibility 0s ease-in-out .15s;
     transition: opacity .15s ease-in-out,visibility 0s ease-in-out .15s;
     visibility: hidden;
-    width: 100%;
+    width: initial;
     z-index: 998;
   }
 
   #menu-open {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .site-navigation {

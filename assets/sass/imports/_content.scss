@@ -66,8 +66,9 @@
 
 .post-full {
   .post-content {
-    padding: 2.5em 7%;
-  }
+    /*padding: 2.5em 7%;*/
+ padding: 2.5em 3%; 
+ }
 
   .post-meta {
     color: inherit;
@@ -209,7 +210,7 @@
 
   .post {
     margin-bottom: 1.875em;
-    padding: 0 7%;
+    padding: 0 3%;
   }
 
   .post-title {

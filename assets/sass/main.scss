@@ -1,27 +1,35 @@
+
 // Font.
 $font: (
-  primary: ("Lato", Helvetica, Arial, sans-serif),
-  monospace: (Monaco, courier, monospace)
+  primary: ('Roboto'),
+  /*monospace: (Monaco, courier, monospace)*/
+  monospace: (SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace)
 );
 
 // Palette.
-{{ $palette := (index .Site.Params.palettes .Site.Params.palette).sass }}
+
 $palette: (
-  primary:           #424b5f,
-  secondary:         #283040,
-  meta:              #67758d,
+  primary:           rgba(14, 30, 37, 0.87),
+  secondary:         rgba(14, 30, 37, 0.87),
+  meta:              var(--navLink),
   border:            #dee5ef,
-  bg:                #f7f9fb,
+  bg:                #f6f6f6,
   note:              #fcb41d,
   important:         #fc381d,
-  accent:            {{ $palette.accent1 }},
-  accent-alt:        {{ $palette.accent2 }},
+  accent:            getPaletteKey(accent1),
+  accent-alt:        getPaletteKey(accent2),
 );
+
+
+
+
+
+
 
 @import "imports/functions";
 
-@import "fontawesome.min.css";
-@import "brands.min.css";
+/*@import "fontawesome.min.css";
+@import "brands.min.css";*/
 
 @import "imports/reset";
 @import "imports/general";
